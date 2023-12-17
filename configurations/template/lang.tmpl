@@ -1,0 +1,84 @@
+Package{
+    java{
+package #packageName# ;
+
+    }
+
+    c#{
+namespace MonNamespace ${
+
+    #code#
+
+
+$}
+    }
+}
+
+DateImport{
+    java{
+import java.sql.Date ;
+    }
+}
+
+
+classDeclaration{
+    java{
+public class #className# ${
+    }
+}
+
+endLine{
+    All{
+$}
+    }
+}
+
+privateFieldsDeclaration{
+    java{
+    private #type# #fieldName# ;
+    }
+}
+
+settersDeclaration{
+    java{
+
+    public void set#Fields#(#type# #Fields#){
+        this.#Fields# = #Fields#;
+    }
+    }
+}
+
+gettersDeclaration
+{   
+    java{
+
+    public #type# get#Fields#(){
+        return #Fields#;
+    }
+    } 
+}
+
+varchar{
+    java{
+        String        
+    }
+}
+
+int4{
+    java{
+        Integer
+    }
+}
+
+float8{
+    java{
+        double
+    }
+}
+
+date{
+    java{
+        Date;DateImport
+    }
+}
+
